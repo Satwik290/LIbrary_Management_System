@@ -1,53 +1,107 @@
-Library Management System
-This is a Library Management System built using C++. It allows users to manage books, members, and transactions within a library setting. The project demonstrates core C++ concepts such as object-oriented programming, file handling, and modular code structure.
+📚 Library Management System in C++
 
-Features
-Add, delete, and update book records
-Add and manage library members
-Issue and return books
-Search for books and members
-View transaction history
-Simple command-line interface
-Getting Started
-Prerequisites
-A C++ compiler (such as g++, clang++)
-Git (to clone the repository)
-Installation
-Clone the repository:
 
+A console-based Library Management System built using Object-Oriented Programming in C++ that allows you to:
+
+Add books 📘
+
+Add students 👨‍🎓
+
+Issue books to students 📖➡️👨‍🎓
+
+This system demonstrates effective usage of classes, inheritance, static members, and standard containers (std::vector) with proper input validation and modular design.
+
+✨ Features
+
+🔹 Book Management
+
+Add new books with details like Accession Number, Title, Author, Price, and Number of Copies.
+
+Tracks total number of books using a static variable.
+
+Displays complete information about each book.
+
+🔹 Student Management
+
+Register students with details like Registration Number, Name, Course, and Semester.
+
+Tracks total number of registered students.
+
+Verifies student existence before issuing books.
+
+🔹 Book Issuing System
+
+Inherits from Book class.
+
+Allows issuing books to students only if copies are available and the student is registered.
+
+Tracks which student has been issued which book using a vector of registration numbers.
+
+🧠 OOP Concepts Used
+
+Encapsulation: Separate classes for Book, Student, and IssueBook.
+
+Inheritance: IssueBook inherits from Book.
+
+Static Members: Track total books and students.
+
+Polymorphism: Method overriding for showDetails() in derived class.
+
+Robust Input Handling: Validates numeric entries with std::cin safeguards.
+
+🛠️ How to Run
+
+✅ Prerequisites
+
+A C++ compiler like G++ or an IDE like CodeBlocks, Visual Studio, or Dev-C++.
+
+🔄 Compile and Run
 bash
-
-
-git clone https://github.com/Satwik290/LIbrary_Management_System.git
-cd LIbrary_Management_System
-Compile the source code:
-
+Copy
+Edit
+g++ -std=c++11 -o library_system library_system.cpp
+./library_system
+🗂️ Project Structure
 bash
+Copy
+Edit
+📁 library_system/
+├── library_system.cpp   # Main C++ source file
+└── README.md            # Project documentation
+🧪 Sample Menu Flow
+txt
+Copy
+Edit
+1. Add new Book
+2. Add new Student
+3. Issue Book
+4. Exit
+Each option leads you through an interactive input process.
 
+📦 Data Flow Overview
+mermaid
+Copy
+Edit
+graph TD
+A[User] -->|Inputs| B[Main Menu]
+B --> C[Add Book]
+B --> D[Add Student]
+B --> E[Issue Book]
+C --> F[Books Vector]
+D --> G[Students Vector]
+E --> H[IssueBook + Validation]
+📈 Future Improvements
+📌 Add persistent file storage using file I/O
 
-g++ -o library_management_system LibraryManagementSystem.cpp
-Run the program:
+📌 Implement return functionality and fine calculation
 
-bash
+📌 Add GUI using C++ frameworks or port to Web using Node.js
 
+🧑‍💻 Author
+Satwik Mohanty
+🔗 GitHub Profile
+💼 Passionate about full-stack development & system design
 
-./library_management_system
-Usage
-Follow the on-screen menu to manage books and members. The system will prompt for relevant information as needed.
+💖 Show Some Love
+If you found this project helpful, consider giving it a ⭐ on GitHub and feel free to fork and contribute!
 
-Project Structure
-Code
-
-
-├── LibraryManagementSystem.cpp
-├── README.md
-└── (other files, if any)
-Contributing
-Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
-
-License
-This project is open source and available under the MIT License.
-
-Author
-Satwik290
-Let me know if you want to customize any section or add usage examples based on your specific implementation!
